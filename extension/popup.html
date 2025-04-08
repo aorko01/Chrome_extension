@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Focus Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div class="container">
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+      <h1>Focus Timer</h1>
+
+      <div class="settings-section">
+        <div class="input-group">
+          <label for="studyTopic">Study Topic:</label>
+          <input
+            type="text"
+            id="studyTopic"
+            placeholder="What are you studying?"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="pomodoroDuration">Pomodoro Duration (minutes):</label>
+          <select id="pomodoroDuration">
+            <option value="25">25 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="45">45 minutes</option>
+            <option value="60">60 minutes</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="sessionCount">Number of Sessions:</label>
+          <select id="sessionCount">
+            <option value="1">1 session</option>
+            <option value="2">2 sessions</option>
+            <option value="3">3 sessions</option>
+            <option value="4">4 sessions</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="timer-section">
+        <div class="timer-display">
+          <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="session-info">
+          Session <span id="currentSession">1</span> of
+          <span id="totalSessions">1</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="startButton" class="primary-button">
+          Start Focus Session
+        </button>
+        <button id="resetButton" class="secondary-button" disabled>
+          Reset
+        </button>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
